@@ -35,11 +35,18 @@ For the people who left the firm (committed to Yes to Attrition), the most commo
 # Results
 
 We select the following variables based on partition influence measure.
-<p align="center">
-  <img width="400" src="https://github.com/yiqiao-yin/IBM-HR-Attrition/blob/master/figs/fig-3-selected-variables.PNG>
-</p>
+| Top Module | Measure | Variables Names |
+| --- | --- | --- |
+| 8, 15, 29 | 13.86 | EducationField, JobRole, YearsAtCompany |
+| 15, 29 | 13.3 | JobRole, YearsAtCompany |
 
 We attempted using Bagging, Gradient Boosting Machine, Naive Bayes, Linear Model, Random Forest, iterative Random Forest, and Bayesian Additive Regression Tree (BART).
-<p align="center">
-  <img width="400" src="https://github.com/yiqiao-yin/IBM-HR-Attrition/blob/master/figs/fig-4-result.PNG>
-</p>
+| Name | Result (Measured by AUC) |
+| --- | --- |
+| Bagging |	0.904 |			
+| GBM |	0.526 |			
+| NB |	0.452 |	
+| LM |	0.745 |		
+| RF |	0.544 |		
+| iRF |	0.808 |		
+| BART |	0.890 |		
