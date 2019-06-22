@@ -55,6 +55,6 @@ We attempted using Bagging, Gradient Boosting Machine, Naive Bayes, Linear Model
 | Linear Model or Least Squares |	0.745 |		
 | Random Forest |	0.544 |		
 | iterative Random Forest |	0.808 |		
-| Bayesian Additive Regression Tree(BART) |	0.890 |	
+| Bayesian Additive Regression Tree (BART) |	0.890 |	
 
 The implication is that a new candidate walks in the door and by collecting the information of EducationField, JobRole, and YearsAtCompany I can tell manager this employee will commit Yes to Attrition with a certain probability that is on average 90% accurate!
