@@ -3,7 +3,7 @@
 This project investigates IBM Human Resources Attrition Data Set. 
 
 <p align="center">
-  <img width="900" src="https://github.com/yiqiao-yin/IBM-HR-Attrition/blob/master/figs/background.gif">
+  <img width="1000" src="https://github.com/yiqiao-yin/IBM-HR-Attrition/blob/master/figs/background.gif">
 </p>
 
 
