@@ -202,7 +202,7 @@ how.many.folds = 5; used_iscore = "used"
 final_table <- read.csv(paste0(path, "/results/performance_5_fold_used_iscore_top_7_var.csv"))[, -1]
 data.frame(final_table)
 ```
-
+The implication is that a new candidate walks in the door and by collecting the information of EducationField, JobRole, and YearsAtCompany I can tell manager this employee will commit Yes to Attrition with a certain probability that is on average 90% accurate!
 
 # Summary
 
@@ -210,7 +210,7 @@ This report investigated IBM HR Employee Attrition data set. The analysis extrac
 
 - My analysis identified the following important variables: EducationField, JobRole, and YearsAtCompany.
 
--For the people who left the firm (committed to Yes to Attrition), the most common JobRole is Laboratory Technician and Sales Representative. From our analysis below, we see that the Laboratory Technician who spent a year at the firm and than left sat on a high of 30.9\% among those who committed Yes to Attrition. The second is Sales Representative that stayed at the firm for a year, at 9.1\%. The third group of people who stayed at the firm for a year and left are Research Scientist, at a shy of 17.6\%. These are the top three demographics that contribute to the Attrition the highest.
+- For the people who left the firm (committed to Yes to Attrition), the most common JobRole is Laboratory Technician and Sales Representative. From our analysis below, we see that the Laboratory Technician who spent a year at the firm and than left sat on a high of 30.9\% among those who committed Yes to Attrition. The second is Sales Representative that stayed at the firm for a year, at 9.1\%. The third group of people who stayed at the firm for a year and left are Research Scientist, at a shy of 17.6\%. These are the top three demographics that contribute to the Attrition the highest.
 
 - Based on Age and WorkLifeBalance, we discovered that for those who committed to Attrition age 29 and 31 with WorkLifeBalance to be 3 happened the most frequently, both at 18.6\%.
 
