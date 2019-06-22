@@ -54,3 +54,7 @@ We attempted using Bagging, Gradient Boosting Machine, Naive Bayes, Linear Model
 | Bayesian Additive Regression Tree(BART) |	0.890 |	
 
 The implication is that a new candidate walks in the door and by collecting the information of EducationField, JobRole, and YearsAtCompany I can tell manager this employee will commit Yes to Attrition with a certain probability that is on average 90% accurate!
+
+# Acknowledgement
+
+I want to thank Natasha for the blog on [People Analytic](https://towardsdatascience.com/people-analytics-with-attrition-predictions-12adcce9573f) for providing background knowledge for me to understand Human Resources departmets. I also want to thank IBM analysts for providing data set on [Kaggle](https://www.kaggle.com/pavansubhasht/ibm-hr-analytics-attrition-dataset/data). 
