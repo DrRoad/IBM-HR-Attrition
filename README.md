@@ -25,5 +25,5 @@ Multiple histograms:
 
 Correlation plot:
 <p align="center">
-  <img width="800" src="https://github.com/yiqiao-yin/IBM-HR-Attrition/blob/master/figs/fig-1-multi-hist.PNG">
+  <img width="800" src="https://github.com/yiqiao-yin/IBM-HR-Attrition/blob/master/figs/fig-1-corrplot.PNG">
 </p>
