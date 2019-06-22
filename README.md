@@ -36,19 +36,13 @@ For the people who left the firm (committed to Yes to Attrition), the most commo
 
 We select the following variables based on partition influence measure.
 
-| Command | Description |
-| --- | --- |
-| `git status` | List all *new or modified* files |
-| `git diff` | Show file differences that **haven't been** staged |
-
-
-
 | Top Module | Measure | Variables Names |
 | --- | --- | --- |
 | 8, 15, 29 | 13.86 | EducationField, JobRole, YearsAtCompany |
 | 15, 29 | 13.3 | JobRole, YearsAtCompany |
 
 We attempted using Bagging, Gradient Boosting Machine, Naive Bayes, Linear Model, Random Forest, iterative Random Forest, and Bayesian Additive Regression Tree (BART).
+
 | Name | Result (Measured by AUC) |
 | --- | --- |
 | Bagging |	0.904 |			
