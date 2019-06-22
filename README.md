@@ -27,3 +27,19 @@ Correlation plot:
 <p align="center">
   <img width="800" src="https://github.com/yiqiao-yin/IBM-HR-Attrition/blob/master/figs/fig-1-corrplot.PNG">
 </p>
+
+Based on correlation, Attrition is associated negatively with Age, JobInvolvement, JobLevel, Jobsatisfaction, MonthlyIncome, StockOptionLevel, TotalWorkingYears, YearsAtCompany, YearsInCurrentCompany, YearsInCurrentRole, and YearsWithCurrManager.
+
+For the people who left the firm (committed to Yes to Attrition), the most common JobRole is Laboratory Technician and Sales Representative. From our analysis below, we see that the Laboratory Technician who spent a year at the firm and than left sat on a high of 30.9% among those who committed Yes to Attrition. The second is Sales Representative that stayed at the firm for a year, at 9.1%. The third group of people who stayed at the firm for a year and left are Research Scientist, at a shy of 17.6%. These are the top three demographics that contribute to the Attrition the highest.
+
+# Results
+
+We select the following variables based on partition influence measure.
+<p align="center">
+  <img width="400" src="https://github.com/yiqiao-yin/IBM-HR-Attrition/blob/master/figs/fig-3-selected-variables.PNG>
+</p>
+
+We attempted using Bagging, Gradient Boosting Machine, Naive Bayes, Linear Model, Random Forest, iterative Random Forest, and Bayesian Additive Regression Tree (BART).
+<p align="center">
+  <img width="400" src="https://github.com/yiqiao-yin/IBM-HR-Attrition/blob/master/figs/fig-4-result.PNG>
+</p>
