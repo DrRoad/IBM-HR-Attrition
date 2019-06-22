@@ -2,6 +2,10 @@
 
 This project investigates IBM Human Resources Attrition Data Set. 
 
+# Acknowledgement
+
+I want to thank Natasha for the blog on [People Analytic](https://towardsdatascience.com/people-analytics-with-attrition-predictions-12adcce9573f) for providing background knowledge for me to understand Human Resources departmets. I also want to thank IBM analysts for providing data set on [Kaggle](https://www.kaggle.com/pavansubhasht/ibm-hr-analytics-attrition-dataset/data). 
+
 # Introduction
 
 Companies hire many employees every year. To create a positive working and learning environment, firms invest time and money in trianing the new members and also to get existing employees involved as well. The goal of these programs aim to increase the effectiveness of the employees and in doing so the firm as a whole can have better output in long run.
@@ -54,7 +58,3 @@ We attempted using Bagging, Gradient Boosting Machine, Naive Bayes, Linear Model
 | Bayesian Additive Regression Tree(BART) |	0.890 |	
 
 The implication is that a new candidate walks in the door and by collecting the information of EducationField, JobRole, and YearsAtCompany I can tell manager this employee will commit Yes to Attrition with a certain probability that is on average 90% accurate!
-
-# Acknowledgement
-
-I want to thank Natasha for the blog on [People Analytic](https://towardsdatascience.com/people-analytics-with-attrition-predictions-12adcce9573f) for providing background knowledge for me to understand Human Resources departmets. I also want to thank IBM analysts for providing data set on [Kaggle](https://www.kaggle.com/pavansubhasht/ibm-hr-analytics-attrition-dataset/data). 
