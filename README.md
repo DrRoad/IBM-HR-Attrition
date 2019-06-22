@@ -2,6 +2,11 @@
 
 This project investigates IBM Human Resources Attrition Data Set. 
 
+<p align="center">
+  <img width="800" src="https://github.com/yiqiao-yin/IBM-HR-Attrition/blob/master/figs/background.gif">
+</p>
+
+
 # Acknowledgement
 
 I want to thank Natasha for the blog on [People Analytic](https://towardsdatascience.com/people-analytics-with-attrition-predictions-12adcce9573f) for providing background knowledge for me to understand Human Resources departmets. I also want to thank IBM analysts for providing data set on [Kaggle](https://www.kaggle.com/pavansubhasht/ibm-hr-analytics-attrition-dataset/data). 
