@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Introduction
 
-Companies hire many employees every year. To create a positive working and learning environment, firms invest time and money in trianing the new members and also to get existing employees involved as well. The goal of these programs aim to increase the effectiveness of the employees and in doing so the firm as a whole can have better output in long run. 
+Companies hire many employees every year. To create a positive working and learning environment, firms invest time and money in training the new members and also to get existing employees involved as well. The goal of these programs aim to increase the effectiveness of the employees and in doing so the firm as a whole can have better output in long run. 
 
 Human resource analytics (or HR analytics) is an important area in this field and it refers to applying statistical and analytic modelling to understand or extract the insight in hoping of improving employee performance and better return on investment. This is a field of analytics work that is not just gathering data but also to provide insight in each step of the process targeting on making sound decisions about how to improve overall satisfactory for new and existing employees.
 
@@ -66,7 +66,7 @@ colnames(levels) <- c("Variable_Names","Number_of_Levels"); levels
 
 ## EDA: Exploratory Data Analysis
 
-Let us take a look at the distribution matrix of all the variables. We can Age follows a distribution that is similar to normal distribution. However, MonthlyIncome may look more like a Poisson process in the sense that most of the sample falls on the lower end of the distribution.
+Let us take a look at the distribution matrix of all the variables. We can assume Age follows a distribution that is similar to normal distribution. However, MonthlyIncome may look more like a Poisson process in the sense that most of the sample falls on the lower end of the distribution.
 
 ```{r, message=FALSE, error=FALSE, warning=FALSE}
 psych::multi.hist(all)
@@ -89,7 +89,7 @@ data.frame(EducationField = levels(raw_data$EducationField),
            Percentage = round(plyr::count(Pi)[7:12, 2]/sum(plyr::count(Pi)[7:12, 2]),3))
 ```
 
-- Based on Age and WorkLifeBalance, we discovered that for those who committed to Attrition age 29 and 31 with WorkLifeBalance to be 3 happened the most frequently, both at 18.6\%.
+- For the employees committed Yes to Attrition, we discovered that the group of people who are age 29 who rated WorkLifeBalance 3 is 18.6\%. It is apparently the same situation with those who are 31 and also rated WorkLifeBalance 3. For WorkLifeBalance, the ratings are from 1 to 4, in total 4 levels. We can interpret 3 to be somewhat satisfied but not very satisfied. A possible explanation is that these are the people who plan to move forward in their careers at this age even though they are not totally upset with what they have right now.
 
 ```{r, message=FALSE, error=FALSE, warning=FALSE}
 sub_data <- cbind(raw_data$Attrition, raw_data$Age, raw_data$WorkLifeBalance)
@@ -100,7 +100,7 @@ tmp_top_6$percent <- round(c(tmp_top_6$freq / sum(tmp_top_6$freq)), 3)
 data.frame(tmp_top_6)
 ```
 
-- For the people who left the firm (committed to Yes to Attrition), the most common JobRole is Laboratory Technician and Sales Representative. From our analysis below, we see that the Laboratory Technician who spent a year at the firm and than left sat on a high of 30.9\% among those who committed Yes to Attrition. The second is Sales Representative that stayed at the firm for a year, at 9.1\%. The third group of people who stayed at the firm for a year and left are Research Scientist, at a shy of 17.6\%. These are the top three demographics that contribute to the Attrition the highest.
+- For the people who left the firm (committed to Yes to Attrition), the most common JobRole is Laboratory Technician and Sales Representative. From our analysis below, we see that the Laboratory Technician who spent a year at the firm and than left sat on a high of 30.9\% among those who committed Yes to Attrition. The second is Sales Representative that stayed at the firm for a year, at 9.1\%. The third group of people who stayed at the firm for a year and left are Research Scientist, at a shy of 17.6\%. These are the top three demographics that contribute to the Attrition the highest. In this case, we can interpret someone with a technical background may come in to the company as a stepping stone and left in a year. It is also plausible same situations are likely in sales department.
 
 ```{r, message=FALSE, error=FALSE, warning=FALSE}
 sub_data <- cbind(raw_data$Attrition, raw_data$JobRole, raw_data$YearsAtCompany)
@@ -112,7 +112,7 @@ tmp_top_6$percent <- round(c(tmp_top_6$freq / sum(tmp_top_6$freq)), 3)
 data.frame(tmp_top_6)
 ```
 
-- Moreover, we can look at how JobRole and YearsSinceLastPromotion affect Attrition. From results below, we see that for those who committed to Attrition, the highest group of people are Lab Technician that did not have any promotion. This makese sense as this is correlated with the previous finding. If a person stayed at a firm for a year or less, chances are this person did not receive any promotion before the job ended. The next is Sales Representative who did not receive promotions. The top two groups described about takes up 29.8\% and 18.2\% of those who committed to Yes to Attrition. 
+- Moreover, we can look at how JobRole and YearsSinceLastPromotion affect Attrition. From results below, we see that for those who committed to Attrition, the highest group of people are Lab Technician that did not have any promotion. This makes sense as this is correlated with the previous finding. If a person stayed at a firm for a year or less, chances are this person did not receive any promotion before the job ended. The next is Sales Representative who did not receive promotions. The top two groups described about takes up 29.8\% and 18.2\% of those who committed to Yes to Attrition. 
 
 ```{r, message=FALSE, error=FALSE, warning=FALSE}
 sub_data <- cbind(raw_data$Attrition, raw_data$JobRole, raw_data$YearsSinceLastPromotion)
@@ -126,7 +126,9 @@ data.frame(tmp_top_6)
 
 # Lab Procedure
 
-The following section we search for an algorithm to further explore our target, Attrition, which is measured by 0 if the employee stays and 1 if the employee leaves.
+The following section we search for an algorithm to further explore our target, Attrition, which is measured by 0 if the employee stays and 1 if the employee leaves. The task is to deliver a solution, a trainable machine, such that we can predict a new candidate's probability of Attrition with high accuracy rate.
+
+The following let me briefly introduce different algorithms.
 
 ## Bagging
 
@@ -171,11 +173,11 @@ For lab procedure, we use k-fold cross validation to compare the results of hand
 
 ## Important Features
 
-We select features using importance measure based on partitions.
+We select features using importance measure based on partitions. The direct approach is to build an algorithm using EducationField, JobRole, and yearsAtCompany. A more superfluous approach is to statistially engineer the variables together to form a new one. In this case, we can engineer the following way.
 
-- The first three important variables are EducationField, JobRole, and YearsAtCompany.
+- The first engineered variable is to combine all three important variables, i.e. EducationField, JobRole, and YearsAtCompany.
 
-- The second two important variables are JobRole, and YearsAtCompany.
+- The second engineered variable is the latter two, i.e. JobRole, and YearsAtCompany.
 
 ```{r, message=FALSE, error=FALSE, warning=FALSE}
 selected_variables <- data.frame(read.csv(paste0(path, "/results/selected_variables.csv")))[, -1]
