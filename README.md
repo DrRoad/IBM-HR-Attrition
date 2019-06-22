@@ -45,10 +45,10 @@ We attempted using Bagging, Gradient Boosting Machine, Naive Bayes, Linear Model
 
 | Name | Result (Measured by AUC) |
 | --- | --- |
-| Bagging |	0.904 |			
-| GBM |	0.526 |			
-| NB |	0.452 |	
-| LM |	0.745 |		
-| RF |	0.544 |		
-| iRF |	0.808 |		
-| BART |	0.890 |		
+| Bagging or Bootstrap Aggregation |	0.904 |			
+| Gradient Boosting Machine |	0.526 |			
+| Naive Bayes |	0.452 |	
+| Linear Model or Least Squares |	0.745 |		
+| Random Forest |	0.544 |		
+| iterative Random Forest |	0.808 |		
+| Bayesian Additive Regression Tree(BART) |	0.890 |		
