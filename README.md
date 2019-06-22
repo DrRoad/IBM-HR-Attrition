@@ -51,7 +51,7 @@ We attempted using Bagging, Gradient Boosting Machine, Naive Bayes, Linear Model
 | --- | --- |
 | Bagging or Bootstrap Aggregation |	0.904 |			
 | Gradient Boosting Machine |	0.526 |			
-| Naive Bayes |	0.452 |	
+| Naive Bayes |	0.50 |	
 | Linear Model or Least Squares |	0.745 |		
 | Random Forest |	0.544 |		
 | iterative Random Forest |	0.808 |		
