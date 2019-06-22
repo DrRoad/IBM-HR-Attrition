@@ -35,6 +35,14 @@ For the people who left the firm (committed to Yes to Attrition), the most commo
 # Results
 
 We select the following variables based on partition influence measure.
+
+| Command | Description |
+| --- | --- |
+| `git status` | List all *new or modified* files |
+| `git diff` | Show file differences that **haven't been** staged |
+
+
+
 | Top Module | Measure | Variables Names |
 | --- | --- | --- |
 | 8, 15, 29 | 13.86 | EducationField, JobRole, YearsAtCompany |
